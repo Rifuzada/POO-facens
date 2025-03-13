@@ -1,4 +1,9 @@
 model\Pessoa.class
+model\Ola.class
+module-info.class
+model\Carro.class
 model\Reuniao.class
 model\Animal.class
+model\Objeto.class
+main\Main.class
 model\Bola.class
