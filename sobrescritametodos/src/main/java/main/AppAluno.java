@@ -107,7 +107,15 @@ class AlunoGraduacao extends Aluno {
     // Sobrescrita do método cracha incluindo curso
     @Override
     void cracha() {
-        System.out.println("Aluno: " + getNome() + ", RA: " + getRa() + ", Curso: " + getCurso());
+        System.out.println("Aluno: " + getNome() + ", RA: " + getRa() + ", Curso: "
+                + getCurso());
+    }
+
+    @Override
+    public String toString() {
+        return "AlunoGraduacao{" + "nome='" + getNome() + '\'' + ", idade=" +
+                getIdade() + ", ra='" + getRa() + '\''
+                + ", curso='" + curso + '\'' + '}';
     }
 
     @Override
@@ -121,7 +129,10 @@ public class AppAluno {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int opcao;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2fd97bec164e3daf3cef788dd80e6b0be084bbdf
         do {
             System.out.println("\n===== MENU CADASTRO =====");
             System.out.println("1. Cadastrar Pessoa");
@@ -132,7 +143,10 @@ public class AppAluno {
             System.out.print(">> Escolha uma opção: ");
             opcao = scn.nextInt();
             scn.nextLine();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2fd97bec164e3daf3cef788dd80e6b0be084bbdf
             try {
                 switch (opcao) {
                     case 1 -> {
@@ -141,14 +155,20 @@ public class AppAluno {
                         System.out.print("Digite a idade: ");
                         int idade = scn.nextInt();
                         scn.nextLine();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2fd97bec164e3daf3cef788dd80e6b0be084bbdf
                         Pessoa pessoa = new Pessoa(nome, idade);
                         System.out.println("=========================");
                         pessoa.cracha();
                         pessoa.mostrarIdade();
                         System.out.println(pessoa);
                         System.out.println("=========================");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2fd97bec164e3daf3cef788dd80e6b0be084bbdf
                     }
                     case 2 -> {
                         System.out.print("Digite o nome: ");
@@ -158,14 +178,20 @@ public class AppAluno {
                         scn.nextLine();
                         System.out.print("Digite o RA: ");
                         String ra = scn.nextLine();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2fd97bec164e3daf3cef788dd80e6b0be084bbdf
                         Aluno aluno = new Aluno(nome, idade, ra);
                         System.out.println("=========================");
                         aluno.cracha();
                         aluno.mostrarIdade();
                         System.out.println(aluno);
                         System.out.println("=========================");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2fd97bec164e3daf3cef788dd80e6b0be084bbdf
                     }
                     case 3 -> {
                         System.out.print("Digite o nome: ");
@@ -177,8 +203,13 @@ public class AppAluno {
                         String ra = scn.nextLine();
                         System.out.print("Digite o curso: ");
                         String curso = scn.nextLine();
+<<<<<<< HEAD
 
                         AlunoGraduacao alunoGraduacao = new AlunoGraduacao(nome, idade, ra, curso);
+=======
+                        AlunoGraduacao alunoGraduacao = new AlunoGraduacao(nome,
+                                idade, ra, curso);
+>>>>>>> 2fd97bec164e3daf3cef788dd80e6b0be084bbdf
                         System.out.println("=========================");
                         alunoGraduacao.cracha();
                         alunoGraduacao.mostrarIdade();
@@ -192,9 +223,12 @@ public class AppAluno {
                 System.err.println("Erro: " + e.getMessage());
                 scn.nextLine();
             }
+<<<<<<< HEAD
 
         } while (opcao != 0);
 
-        scn.close();
-    }
-}
+=======
+        }while(opcao!=0);>>>>>>>2f
+
+    d97bec164e3daf3cef788dd80e6b0be084bbdf scn.close();
+}}
