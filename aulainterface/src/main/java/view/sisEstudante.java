@@ -1,6 +1,10 @@
 package view;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
 import model.AlunoEnsinoFundamental;
 import model.AlunoEnsinoMedio;
 import model.AlunoGraduacao;

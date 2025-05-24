@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
+// Classe base Pessoa
 class Pessoa {
     protected String nome;
     protected String email;
@@ -12,18 +13,21 @@ class Pessoa {
         this.telefone = telefone;
     }
 
+    // Método sobrescrito nas subclasses
     public String enviarEmail(String mensagem) {
         return "Olá, " + nome + "!\n" + mensagem + "\nEmail: " + email + "\nTelefone: " + telefone;
     }
 
+    // Exibe resumo do cadastro
     public String resumoCadastro() {
         return "- Tipo: " + this.getClass().getSimpleName()
-             + " | Nome: " + nome
-             + " | E-mail: " + email
-             + " | Telefone: " + telefone;
+                + " | Nome: " + nome
+                + " | E-mail: " + email
+                + " | Telefone: " + telefone;
     }
 }
 
+// Classe Aluno herda de Pessoa
 class Aluno extends Pessoa {
     public Aluno(String nome, String email, String telefone) {
         super(nome, email, telefone);
@@ -35,6 +39,7 @@ class Aluno extends Pessoa {
     }
 }
 
+// Classe Professor herda de Pessoa
 class Professor extends Pessoa {
     public Professor(String nome, String email, String telefone) {
         super(nome, email, telefone);
@@ -42,10 +47,12 @@ class Professor extends Pessoa {
 
     @Override
     public String enviarEmail(String mensagem) {
-        return "Olá Professor " + nome + "!\nEstamos felizes com sua participação!\nEmail: " + email + "\nTelefone: " + telefone;
+        return "Olá Professor " + nome + "!\nEstamos felizes com sua participação!\nEmail: " + email + "\nTelefone: "
+                + telefone;
     }
 }
 
+// Classe principal
 public class AppPessoas {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
@@ -94,8 +101,8 @@ public class AppPessoas {
 
                         System.out.println("\nEnviando mensagens com uso de polimorfismo...\n");
                         for (Pessoa p : lista) {
-                            System.out.println("🔎 Tipo real do objeto: " + p.getClass().getSimpleName());
-                            System.out.println("📨 Resultado do método polimórfico:");
+                            System.out.println("Tipo real do objeto: " + p.getClass().getSimpleName());
+                            System.out.println("Resultado do método polimórfico:");
                             System.out.println(p.enviarEmail(corpoMensagem));
                             System.out.println("-----------------------------");
                         }
