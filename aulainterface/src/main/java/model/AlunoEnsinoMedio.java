@@ -1,6 +1,6 @@
 package model;
 
-class AlunoEnsinoMedio implements Estudante {
+public class AlunoEnsinoMedio implements Estudante {
     private String nome;
     private int id;
     private double prova1, prova2;
