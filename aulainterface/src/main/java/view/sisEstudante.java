@@ -16,7 +16,7 @@ public class sisEstudante {
         List<Estudante> alunos = new ArrayList<>();
         System.out.println("Sistema de Cadastro de Alunos");
 
-        System.out.println("\n CAdastro de Aluno | Graduação");
+        System.out.println("\n Cadastro de Aluno | Graduação");
         System.out.println("Nome: ");
         String nomeG = sc.nextLine();
 
