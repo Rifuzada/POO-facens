@@ -1,0 +1,4 @@
+Main.class
+model\Livro.class
+controller\BibliotecaController.class
+view\BibliotecaView.class
